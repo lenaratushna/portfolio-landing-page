@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'gilroy-medium';
+    src: url('../fonts/gilroy-medium.woff2') format('woff2'),
+         url('../fonts/gilroy-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroy-bold';
+    src: url('../fonts/gilroy-bold.woff2') format('woff2'),
+         url('../fonts/gilroy-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    box-sizing: border-box;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'gilroy-medium', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+h1{
+    font-family: 'gilroy-bold';
+    font-size: 50px;
+    line-height: 59px;
+}
+
+h2{
+    font-family: 'gilroy-bold';
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+a{
+    font-family: 'gilroy-bold';
+    text-decoration: none;
+    color: #828282;
+}
+
+a:hover, a:focus, a:active{
+    color: #000000;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 950px;
+    margin: 0 auto;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s linear;
+    z-index: 99;
+    background-color: #ffffff;
+}
+
+.nav_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 1px solid #828282;
+}
+
+/*Styles for intro*/
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 100px 0 25px 0;
+}
+
+.intro_name{
+    position: relative;
+    top: 14px; 
+}
+
+.intro_desc{
+    position: relative;
+    top: 4px;
+}
+
+.lang_switch{
+    position: relative;
+    transform: rotate(-90deg);
+    bottom: 20px;
+    left: 20px;
+}
+
+.lang_link{
+    font-size: 16px;
+    line-height: 20px;   
+}
+
+.intro_photo{
+    margin: 50px 0 100px 0;
+}
+
+/*Styles for about*/
+#about{
+    background-color: #F6F6F6;
+    padding: 100px 0;
+
+}
+
+.about_text{
+    margin: 18px;
+}
+
+.about_text_container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+/*Styles for skills*/
+
+#skills{
+    
+    padding: 90px 0;
+}
+
+.skills_text{
+    margin: 70px 0;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill_icon{
+    display: block;
+    margin: 0 auto;
+}
+
+.skill_text{
+    font-size: 14px;
+    padding: 25px 0 40px 0;
+}
+
+.rating{
+    font-size: 26px;
+    text-align: center;
+}
+
+/*Styles for portfolio*/
+
+#portfolio{
+    padding: 90px 0;
+    background-color: #F6F6F6;
+}
+
+.portfolio_item{
+    padding: 45px 0;
+    text-align: center;
+}
+
+.portfolio_item:last-child{
+    padding-bottom: 0;
+}
+
+.portfolio_link{
+    display: block;
+    font-family: gilroy-medium;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-decoration: underline;
+    margin: 40px 0 20px 0;
+}
+
+
+.portfolio_link:hover, .portfolio_link:focus, .portfolio_link:active{
+    opacity: .5;
+}
+
+/*Styles for contacts*/
+#contacts{
+    padding: 90px 0;
+    text-align: center;
+}
+
+.contacts_text{
+    margin: 20px 0;
+}
+
+a.button{
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 90px;
+    
+}
+
+a.button:hover, a.button:focus, a.button:active{
+    opacity: .5;
+}
+
+.contact_links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.contact_link{
+    display: block;
+    margin: 0 40px;
+}
+
+.contact_link:hover, .contact_link:focus, .contact_link:active{
+    opacity: .5;
+}
+
+.contact_icon{
+    width: 40px;
+    height: 40px;
+}
+
+.contacts_links_text{
+    margin-top: 45px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
