@@ -23,6 +23,7 @@ html{
 
 body{
     font-family: 'gilroy-medium', 'Arial', sans-serif;
+    text-align: center;
     font-size: 18px;
     line-height: 22px;
     color: #000000;
@@ -38,11 +39,6 @@ h2{
     font-family: 'gilroy-bold';
     font-size: 34px;
     line-height: 42px;
-    text-align: center;
-}
-
-p{
-    text-align: center;
 }
 
 a{
@@ -164,7 +160,6 @@ img{
 
 .rating{
     font-size: 26px;
-    text-align: center;
 }
 
 /*Styles for portfolio*/
@@ -176,7 +171,6 @@ img{
 
 .portfolio_item{
     padding: 45px 0;
-    text-align: center;
 }
 
 .portfolio_item:last-child{
@@ -201,7 +195,6 @@ img{
 /*Styles for contacts*/
 #contacts{
     padding: 90px 0;
-    text-align: center;
 }
 
 .contacts_text{
