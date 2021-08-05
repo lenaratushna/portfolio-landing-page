@@ -1,6 +1,6 @@
 'use strict';
 
-const sections = document.querySelectorAll('.nav_item a');
+const sections = document.querySelectorAll('.nav a');
 
 sections.forEach((section) => {
     section.addEventListener('click', function (e) {

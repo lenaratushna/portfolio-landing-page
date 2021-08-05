@@ -14,12 +14,39 @@
     font-style: normal;
 }
 
-html{
-    box-sizing: border-box;
+/*Reset styles*/
+*{
+padding: 0;
+margin: 0;
+border: 0;
 }
-*,*::before, *::after{
-    box-sizing: inherit;
+ *,*:before,*:after{
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
 }
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+height: 100%;
+width: 100%;
+font-size: 100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
 
 body{
     font-family: 'gilroy-medium', 'Arial', sans-serif;
@@ -29,22 +56,19 @@ body{
     color: #000000;
 }
 
-h1{
+h1,h2{
     font-family: 'gilroy-bold';
+}
+
+h1{
     font-size: 50px;
     line-height: 59px;
 }
 
 h2{
-    font-family: 'gilroy-bold';
     font-size: 34px;
     line-height: 42px;
-}
-
-a{
-    font-family: 'gilroy-bold';
-    text-decoration: none;
-    color: #828282;
+    margin-bottom: 30px;
 }
 
 a:hover, a:focus, a:active{
@@ -57,158 +81,211 @@ img{
     height: auto;
 }
 
-.container{
-    width: 950px;
-    margin: 0 auto;
+.container {
+   max-width: 980px;
+   padding: 0 15px;
+   margin: 0 auto;
 }
+
+/*Styles for navigation*/
 
 .nav{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
     transition: .2s linear;
     z-index: 99;
     background-color: #ffffff;
 }
 
-.nav_list{
+.nav ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 25px 0;
     border-bottom: 1px solid #828282;
 }
 
-/*Styles for intro*/
+.nav ul li a{
+    font-family: 'gilroy-bold';
+    color:#828282;
+}
 
-/*Устранение смещения из-за фиксированного блока меню.*/
-#home{
+.nav ul li a:hover, .nav ul li a:focus, .nav ul li a:active{
+    color: #000000;
+}
+
+/*Styles for section Home*/
+
+.home{
     border-top: 55px solid transparent;
 	margin-top: -55px;
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
+    padding-bottom: 60px;
 }
 
-.intro{
+.home .intro{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 100px 0 25px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 87px;
+    padding: 21px 0 40px 0;
 }
 
-.intro_name{
+.home .intro .intro_name{
     position: relative;
-    top: 14px; 
+    top: 13px;
 }
 
-.intro_desc{
+.home .intro .intro_desc{
     position: relative;
-    top: 4px;
+    top: 5px;
 }
 
-.lang_switch{
+.home .intro .lang_switch{
     position: relative;
-    transform: rotate(-90deg);
-    bottom: 20px;
-    left: 20px;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    top: -24px;
 }
 
-.lang_link{
+.home .intro .lang_switch a {
+    font-family: 'gilroy-bold';
     font-size: 16px;
-    line-height: 20px;   
+    color:#828282;
 }
 
-.intro_photo{
-    margin: 50px 0 100px 0;
+.home .intro .lang_switch a:hover,
+.home .intro .lang_switch a:focus,
+.home .intro .lang_switch a:active{
+    color: #000000;
 }
 
-/*Styles for about*/
-#about{
+/*Styles for section About*/
+
+.about{
+    border-top: 55px solid transparent;
+	margin-top: -55px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+    padding: 50px 0;
     background-color: #F6F6F6;
-    padding: 100px 0;
-
 }
 
-.about_text{
-    margin: 18px;
+.about div{
+    max-width: 500px;
 }
 
-.about_text_container{
-    width: 500px;
-    margin: 0 auto;
+.about p{
+    margin-bottom: 25px;
 }
 
-/*Styles for skills*/
-
-#skills{
-    
-    padding: 90px 0;
-}
-
-.skills_text{
-    margin: 70px 0;
-}
+/*Styles for section Skills*/
 
 .skills{
+    border-top: 55px solid transparent;
+	margin-top: -55px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+    padding: 50px 0 10px 0;
+}
+
+.skills .skills_text{
+    margin-bottom: 40px;
+}
+
+.skills .skills_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
-.skill_icon{
-    display: block;
+.skills .skills_container .skill_icon{
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
-.skill_text{
+.skills .skills_container .skill_text{
     font-size: 14px;
-    padding: 25px 0 40px 0;
+    margin-bottom: 10px;
 }
 
-.rating{
-    font-size: 26px;
+.skills .skills_container .rating{
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
-/*Styles for portfolio*/
+/*Styles for section Portfolio*/
 
-#portfolio{
-    padding: 90px 0;
+.portfolio{
+    border-top: 55px solid transparent;
+	margin-top: -55px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+    padding: 50px 0;
     background-color: #F6F6F6;
 }
 
-.portfolio_item{
-    padding: 45px 0;
+.portfolio img{
+    margin-bottom: 25px;
 }
 
-.portfolio_item:last-child{
-    padding-bottom: 0;
+.portfolio div{
+    margin-bottom: 80px;
 }
 
-.portfolio_link{
+.portfolio a{
     display: block;
-    font-family: gilroy-medium;
+    font-family: 'gilroy-medium';
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+}
+
+.portfolio a:hover, .portfolio a:focus, .portfolio a:active{
     text-decoration: underline;
-    margin: 40px 0 20px 0;
+    opacity: .7;
 }
 
-
-.portfolio_link:hover, .portfolio_link:focus, .portfolio_link:active{
-    opacity: .5;
+.portfolio div:last-child{
+    margin-bottom: 0px;
 }
 
-/*Styles for contacts*/
-#contacts{
-    padding: 90px 0;
+/*Styles for section Contacts*/
+
+.contacts{
+    border-top: 55px solid transparent;
+	margin-top: -55px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+    padding: 50px 0;
 }
 
-.contacts_text{
-    margin: 20px 0;
+.contacts .contacts_text{
+    margin-bottom: 40px;
 }
 
 a.button{
@@ -216,37 +293,35 @@ a.button{
     background-color: #000000;
     color: #ffffff;
     padding: 12px 24px;
-    border-radius: 90px;
-    
+    border-radius: 90px; 
+    margin-bottom: 80px;
 }
 
 a.button:hover, a.button:focus, a.button:active{
     opacity: .5;
 }
 
-.contact_links{
+.contacts .contact_links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 90px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
 }
 
-.contact_link{
-    display: block;
+.contacts .contact_links a{
     margin: 0 40px;
 }
 
-.contact_link:hover, .contact_link:focus, .contact_link:active{
+.contacts .contact_links a:hover,
+.contacts .contact_links a:focus,
+.contacts .contact_links a:active{
     opacity: .5;
 }
 
-.contact_icon{
-    width: 40px;
-    height: 40px;
-}
-
-.contacts_links_text{
-    margin-top: 45px;
+.contacts .contacts_links_text{
     font-size: 14px;
     line-height: 17px;
     color: #828282;
