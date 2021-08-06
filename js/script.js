@@ -1,5 +1,6 @@
 'use strict';
 
+// Scroll to sections
 const sections = document.querySelectorAll('.nav a');
 
 sections.forEach((section) => {
@@ -14,4 +15,3 @@ sections.forEach((section) => {
     });
   });
 });
-

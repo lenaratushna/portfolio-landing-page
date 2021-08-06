@@ -75,12 +75,6 @@ a:hover, a:focus, a:active{
     color: #000000;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
 .container {
    max-width: 980px;
    padding: 0 15px;
@@ -176,6 +170,12 @@ img{
     color: #000000;
 }
 
+.home .intro_photo img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /*Styles for section About*/
 
 .about{
@@ -221,6 +221,10 @@ img{
         justify-content: space-around;
 }
 
+.skills .skills_container .skill{
+    margin: 0 30px;
+}
+
 .skills .skills_container .skill_icon{
     margin: 0 auto;
     margin-bottom: 25px;
@@ -249,6 +253,9 @@ img{
 }
 
 .portfolio img{
+    display: block;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 25px;
 }
 
@@ -326,3 +333,16 @@ a.button:hover, a.button:focus, a.button:active{
     line-height: 17px;
     color: #828282;
 }
+
+.contacts .contact_links img{
+    min-width: 40px;
+}
+
+/* Media */
+
+@media  screen and (max-width: 480px) {
+    .contacts .contact_links a{
+        margin: 0 20px;
+    }
+}
+
