@@ -61,6 +61,7 @@ h1,h2{
 }
 
 h1{
+    text-align: left;
     font-size: 50px;
     line-height: 59px;
 }
@@ -101,7 +102,7 @@ a:hover, a:focus, a:active{
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     padding: 25px 0;
     border-bottom: 1px solid #828282;
 }
@@ -341,6 +342,51 @@ a.button:hover, a.button:focus, a.button:active{
 /* Media */
 
 @media  screen and (max-width: 480px) {
+
+    h1{
+       font-size: 46px;
+       line-height: 40px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .home{
+        padding-bottom: 30px;
+    }
+
+    .about, .skills, .portfolio, .contacts{
+        padding: 25px 0;
+    }
+
+    .home .intro{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .home .intro .intro_name{
+        top: -10px;
+    }
+
+    .home .intro .intro_desc{
+        text-align: left;
+        top: 18px;
+    }
+
+    .home .intro .lang_switch{
+        display: none;
+    }
+
+    .about p{
+        margin-bottom: 15px;
+    }
+
+    a.button{
+        margin-bottom: 40px;
+    }
+
     .contacts .contact_links a{
         margin: 0 20px;
     }
